@@ -36,7 +36,7 @@
                 android:layout_centerInParent="true"
                 android:layout_alignParentRight="true"
                 android:layout_marginRight="10dp"
-                android:src="@android:drawable/ic_dialog_dialer"/>
+                android:src="@drawable/ic_dialog_dialer"/>
         <ImageButton
                 android:id="@+id/run_btn"
                 android:layout_width="wrap_content"
@@ -45,7 +45,7 @@
                 android:layout_centerInParent="true"
                 android:layout_toLeftOf="@id/menu_btn"
                 android:layout_marginRight="10dp"
-                android:src="@android:drawable/ic_menu_send"/>
+                android:src="@drawable/ic_menu_send"/>
 
     </RelativeLayout>
     <com.baidu.mapapi.map.MapView android:id="@+id/bmapsView"
