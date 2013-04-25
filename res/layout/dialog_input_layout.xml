@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content">
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:padding="10dp"
+                  android:layout_height="match_parent">
+        <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/fav_name"
+                android:layout_height="wrap_content" />
+        <EditText
+                android:id="@+id/dialog_input_name"
+                styles="@style/SignInEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:maxLength="14"
+                android:capitalize="none"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textColor="@color/table_text"
+                android:textCursorDrawable="@drawable/edit_text_cursor"
+                android:textSize="20sp"
+                android:padding="5dp"
+                android:background="@drawable/edit_text_background"
+                android:layout_marginLeft="10dp"
+                />
+    </LinearLayout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                  android:orientation="horizontal"
+                  android:layout_width="match_parent"
+                  android:padding="10dp"
+                  android:layout_height="match_parent">
+        <TextView
+                android:layout_width="wrap_content"
+                android:text="@string/fav_location"
+                android:layout_height="wrap_content" />
+        <EditText
+                android:id="@+id/dialog_input_number"
+                styles="@style/SignInEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:maxLength="14"
+                android:padding="5dp"
+                android:inputType="phone"
+                android:capitalize="none"
+                android:editable="false"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:textColor="@color/table_text"
+                android:textCursorDrawable="@drawable/edit_text_cursor"
+                android:textSize="20sp"
+                android:background="@drawable/edit_text_background"
+                android:layout_marginLeft="10dp"
+                />
+    </LinearLayout>
+</LinearLayout>

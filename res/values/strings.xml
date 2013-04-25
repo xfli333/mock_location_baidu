@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">筋斗云百度版</string>
+    <string name="set_location">设为当前坐标</string>
+    <string name="fav_name">收藏名称:</string>
+    <string name="fav_location">收藏坐标:</string>
+</resources>
