@@ -46,20 +46,24 @@ public class MainActivity extends Activity implements View.OnClickListener {
     private ItemizedOverlay<OverlayItem> itemItemizedOverlay;
     private OverlayItem currentOverlayItem;
 
+
+
     @Override
     public boolean onTouchEvent(final MotionEvent event) {
         mHandler.post(new Runnable() {
             @Override
             public void run() {
-                Projection projection=mMapView.getProjection();
-                GeoPoint loc=projection.fromPixels((int)event.getX(),(int)event.getY()-100);
-                itemItemizedOverlay.removeAll();
-                mMapView.getOverlays().remove(itemItemizedOverlay);
-                currentOverlayItem=new OverlayItem(loc,"title","location");
-                itemItemizedOverlay.addItem(currentOverlayItem);
-                currentLocation = GeoPointUtils.convertGeoPointToLatLng(loc);
-                mMapView.getOverlays().add(itemItemizedOverlay);
-                mMapView.refresh();
+                if ((int) event.getY() > 110) {
+                    Projection projection = mMapView.getProjection();
+                    GeoPoint loc = projection.fromPixels((int) event.getX(), (int) event.getY() - 100);
+                    itemItemizedOverlay.removeAll();
+                    mMapView.getOverlays().remove(itemItemizedOverlay);
+                    currentOverlayItem = new OverlayItem(loc, "title", "location");
+                    itemItemizedOverlay.addItem(currentOverlayItem);
+                    currentLocation = GeoPointUtils.convertGeoPointToLatLng(loc);
+                    mMapView.getOverlays().add(itemItemizedOverlay);
+                    mMapView.refresh();
+                }
             }
         });
 
@@ -205,7 +209,6 @@ public class MainActivity extends Activity implements View.OnClickListener {
         mMapController.setCenter(GeoPointUtils.convertLatLngToGeoPoint(currentLocation));//设置地图中心点
         currentOverlayItem=new OverlayItem(GeoPointUtils.convertLatLngToGeoPoint(currentLocation),"title","location");
         itemItemizedOverlay.addItem(currentOverlayItem);
-        currentLocation = defaultLatLng;
         mMapView.getOverlays().add(itemItemizedOverlay);
         mMapView.refresh();
         mFavDialog.dismiss();
